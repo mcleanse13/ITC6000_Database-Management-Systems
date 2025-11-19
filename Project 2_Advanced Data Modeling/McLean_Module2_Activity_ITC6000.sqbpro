@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/seanm/OneDrive/Desktop/McLean_Module2_Activity.db" readonly="0" foreign_keys="" case_sensitive_like="" temp_store="" wal_autocheckpoint="" synchronous=""/><attached/><window><main_tabs open="structure browser pragmas query" current="2"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="150"/><column_width id="3" width="2317"/><column_width id="4" width="0"/></tab_structure><tab_browse><current_table name="0,0:"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="Movies">CREATE TABLE MOVIES (
+	Budget			INTEGER,
+ 	Company 	CHAR,
+	Country CHAR,
+	Director	CHAR,
+	Genre 	CHAR,
+	Gross	INTEGER,
+Name CHAR,
+Rating CHAR,
+Released DATE,
+Runtime INTEGER,
+Score NUMERIC,
+Star CHAR,
+Votes INTEGER,
+Writer CHAR,
+Year INTEGER	);</sql><sql name="Movies - Populate Tables">INSERT INTO MOVIES VALUES ('250000000', 'Warner Bros.', 'UK', 'Christopher Nolan', 'Action', '448139099', 'The Dark Knight Rises', 'PG-13', '7/20/2012', '164', '8.4', 'Christian Bale', '1253772', 'Jonathan Nolan', '2012');
+INSERT INTO MOVIES VALUES ('100000000',	'The Weinstein Company', 'USA', 'Quentin Tarantino', 'Drama', '162805434', 'Django Unchained', 'R', '12/25/2012', '165', '8.4',	'Jamie Foxx', '1070691', 'Quentin Tarantino', '2012');
+INSERT INTO MOVIES VALUES ('780+C7+A4:A4:O4', 'Lionsgate', 'USA', 'Gary Ross', 'Adventure',	'408010692', 'The Hunger Games', 'PG-13', '3/23/2012', '142', '7.2', 'Jennifer Lawrence', '748581',	'Gary Ross', '2012');
+INSERT INTO MOVIES VALUES ('220000000',	'Marvel Studios', 'USA', 'Joss Whedon',	'Action', '623357910', 'The Avengers', 'PG-13',	'5/4/2012', '143', '8.1', 'Robert Downey Jr.', '1064633', 'Joss Whedon', '2012');
+INSERT INTO MOVIES VALUES ('0',	'Twentieth Century Fox Film Corporation', 'USA', 'Ridley Scott', 'Adventure', '126477084',	'Prometheus', 'R', '6/8/2012', '124', '7',	'Noomi Rapace',	'503113', 'Jon Spaihts', '2012');
+INSERT INTO MOVIES VALUES ('180+C6+A7:O+A7:O7',	'New Line Cinema',	'USA',	'Peter Jackson', 'Adventure', '303003568', 'The Hobbit: An Unexpected Journey',	'PG-13', '12/14/2012', '169', '7.9', 'Martin Freeman', '680250', 'Fran Walsh', '2012');
+INSERT INTO MOVIES VALUES ('17000000+A8:O8', 'Brownstone Productions (II)',	'USA', 'Jason Moore', 'Comedy',	'65001093',	'Pitch Perfect', 'PG-13', '10/5/2012', '112', '7.2', 'Anna Kendrick', '231932',	'Kay Cannon', '2012');
+INSERT INTO MOVIES VALUES ('60+C8+A9:O+A9:O9', 'Paramount Pictures', 'USA',	'Christopher McQuarrie', 'Action', '80070736', 'Jack Reacher', 'PG-13',	'12/21/2012', '130', '7', 'Tom Cruise',	'257474', 'Lee Child', '2012');</sql><current_tab id="0"/></tab_sql></sqlb_project>
