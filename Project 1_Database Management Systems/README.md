@@ -5,11 +5,8 @@ This module introduces the fundamentals of Database Management Systems, focusing
 Learning Outcomes
 
 By the end of this module, you will be able to:
-
 Describe common database use-cases and high-level system architecture
-
 Practice Entity Relationship Modeling (ERM) concepts
-
 Create Entity Relationship Diagrams (ERDs) to represent data structures
 
 Module Activities
