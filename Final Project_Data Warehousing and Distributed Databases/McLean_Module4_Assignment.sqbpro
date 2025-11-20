@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?><sqlb_project><db path="C:/Users/seanm/OneDrive/Desktop/ITC 6000/McLean_Module4_Assignment.db" readonly="0" foreign_keys="1" case_sensitive_like="0" temp_store="0" wal_autocheckpoint="1000" synchronous="2"/><attached/><window><main_tabs open="structure browser pragmas query" current="3"/></window><tab_structure><column_width id="0" width="300"/><column_width id="1" width="0"/><column_width id="2" width="150"/><column_width id="3" width="2034"/><column_width id="4" width="0"/><expanded_item id="0" parent="1"/><expanded_item id="1" parent="1"/><expanded_item id="2" parent="1"/><expanded_item id="3" parent="1"/></tab_structure><tab_browse><current_table name="4,9:mainCommunity"/><default_encoding codec=""/><browse_table_settings/></tab_browse><tab_sql><sql name="SQL 1">CREATE TABLE Community(
+Music VARCHAR(30) PRIMARY KEY,
+Fans varchar(100),
+Artists varchar(50),
+Venues varchar(40),
+City varchar(100),
+Promoters varchar(30),
+Inclusivity varchar(25),
+Impact varchar(30)
+);
+
+CREATE TABLE OneStopExperience(
+Fans VARCHAR(200) PRIMARY KEY,
+Tickets varchar(100),
+Concerts varchar(50),
+Music varchar(40),
+Artists varchar(100),
+City varchar(30)
+);
+
+CREATE TABLE Recommendations(
+Fans VARCHAR(200) PRIMARY KEY,
+Venues varchar(100),
+Concerts varchar(50),
+Music varchar(40),
+Artists varchar(100),
+Geography varchar(30)
+);
+
+CREATE TABLE Artists(
+Music VARCHAR(200) PRIMARY KEY,
+Tour Dates date(100),
+Announcements varchar(50),
+Venues varchar(40),
+Tickets varchar(100),
+Genres varchar(30),
+Live Streams varchar(50),
+Promoters varchar(80)
+);
+
+CREATE TABLE User(
+Fans VARCHAR(150) PRIMARY KEY,
+Music varchar(150),
+Geography varchar(70),
+Tickets varchar(30),
+Followed Artists varchar(120),
+Concerts varchar(80),
+Live Streams varchar(60)
+);
+
+CREATE TABLE ConcertsFestivals(
+Music VARCHAR(175) PRIMARY KEY,
+Tickets varchar(100),
+Fans varchar(95),
+Venues varchar(100),
+Promoters varchar(30),
+Live Streams varchar(20)
+);
+
+CREATE TABLE Venues(
+Music VARCHAR(150) PRIMARY KEY,
+Live Shows varchar(120),
+Promoters varchar(40),
+Tickets varchar(50),
+City varchar(75),
+Fans varchar(100)
+);
+
+-- Insert Table Commands
+INSERT INTO Artists
+VALUES ('BandsInTown', '2023-12-12', 'New Album', 'Paradise', 'General Admission', 'Rock', 'YouTube', 'John Smith');
+
+INSERT INTO Community
+VALUES ('BandsInTown', 'Dewey Finn', 'Patti Smith', 'CBGBs', 'New York', 'Kevin Malone', 'All Ages', 'Charities');
+
+insert into ConcertsFestivals
+values ('BandsInTown', 'General Admission', 'Michael Scott', 'Wilbur Theater', 'Stanley Hudson', 'Spotify');
+
+insert into OneStopExperience
+VALUES ('Dwight Schrute', 'Floor', 'Green Day', 'BandsInTown', 'Rage Against The Machine', 'Boston');
+
+INSERT into Recommendations
+values ('Jim Halpert', 'Bowery', 'Rolling Stones', 'BandsInTown', 'Aerosmith', 'Within 10 Miles');
+
+insert into User
+VALUES ('Pam Beesley', 'BandsInTown', 'Within 25 Miles', 'General Admission', 'Taylor Swift', 'The Who', 'Apple Music');
+
+insert into Venues
+VALUES ('BandsInTown', 'The Offspring', 'Andy Bernard', 'Floor', 'Hartford', 'Ryan Howard');
+
+-- Select Statements
+SELECT * FROM Artists;
+
+-- Retrieve Concert Details with Venue Information
+SELECT ConcertsFestivals.Live
+FROM ConcertsFestivals
+JOIN Venues ON ConcertsFestivals.Music = Venues.Music;
+
+-- Select Fans from tables
+SELECT DISTINCT Community.Fans, OneStopExperience.Fans, Recommendations.Fans, User.Fans, ConcertsFestivals.Fans, Venues.Fans
+FROM Community, OneStopExperience, Recommendations, User, ConcertsFestivals, Venues;
+
+-- Count Concerts by City
+SELECT Venues.City, COUNT(OneStopExperience.Fans) AS ConcertCount
+FROM Venues
+LEFT JOIN OneStopExperience ON Venues.Music = OneStopExperience.Fans
+GROUP BY Venues.City;
+
+-- List Venues and Ticket Information
+SELECT Artists.Tickets, Artists.Venues, ConcertsFestivals.Tickets, ConcertsFestivals.Venues
+FROM Artists
+JOIN ConcertsFestivals ON Artists.Music = ConcertsFestivals.Music
+WHERE ConcertsFestivals.Tickets = 'General Admission';
+
+-- Order By Function with Geography columns
+SELECT Recommendations.Geography, User.Geography
+FROM Recommendations, User
+ORDER BY Recommendations.Geography ASC, user.Geography DESC;
+</sql><current_tab id="0"/></tab_sql></sqlb_project>
