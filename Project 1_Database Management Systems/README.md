@@ -2,7 +2,7 @@ Database Management Fundamentals and ERD Design Using Draw.IO
 
 Module Overview:
 
-This module introduces the fundamentals of Database Management Systems, focusing on modern database use-cases, high-level architecture, and core design principles. We learned the basics of data modeling and gained hands-on experience creating Entity Relationship Diagrams (ERDs) using Draw.IO, an industry-standard visual modeling tool used for diagramming and solution design across Informatics and Analytics roles.
+This module introduced the fundamentals of Database Management Systems, focusing on modern database use-cases, high-level architecture, and core design principles. We learned the basics of data modeling and gained hands-on experience creating Entity Relationship Diagrams (ERDs) using Draw.IO, an industry-standard visual modeling tool used for diagramming and solution design across Informatics and Analytics roles.
 
 Learning Outcomes:
 
